@@ -388,7 +388,7 @@ export default class ReactSVGPanZoom extends React.Component {
             tool={tool}
             onChangeTool={tool => this.changeTool(tool)}
             {...this.props.toolbarProps} />}
-
+         {console.log(props.children.props.children}
         {props.miniaturePosition === POSITION_NONE ? null :
           <CustomMiniature
             position={props.miniaturePosition}
