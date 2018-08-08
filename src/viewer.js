@@ -254,7 +254,7 @@ export default class ReactSVGPanZoom extends React.Component {
 
     let blockChildEvents = [TOOL_PAN, TOOL_ZOOM_IN, TOOL_ZOOM_OUT].indexOf(tool) >= 0;
     blockChildEvents = blockChildEvents || panningWithToolAuto;
-
+    console.log(props.children.props.children);
     return (
       <div
         style={{position: "relative", width: value.viewerWidth, height: value.viewerHeight, ...props.style}}
@@ -388,7 +388,6 @@ export default class ReactSVGPanZoom extends React.Component {
             tool={tool}
             onChangeTool={tool => this.changeTool(tool)}
             {...this.props.toolbarProps} />}
-         {console.log(props.children.props.children}
         {props.miniaturePosition === POSITION_NONE ? null :
           <CustomMiniature
             position={props.miniaturePosition}
